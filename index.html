@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RankPulseHQ — A Fresh SEO Content Drop Every 3 Days</title>
+<meta name="description" content="RankPulseHQ is a done-for-you SEO content engine. Every 3 days, a new SEO Content Drop lands in your Whop chat: 3 long-form researched articles, meta descriptions, and internal-link suggestions — publish-ready. $250 every 3 days, cancel anytime.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060b09'/%3E%3Cpath d='M4 17h5l2.4-6.5L15 23l3.4-11 2.2 5h7.4' fill='none' stroke='%232ee6a8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#060b09; --bg2:#081009; --card:#0c1512; --card2:#0e1a15;
+    --line:#17251f; --line2:#22392f;
+    --text:#e9f4ee; --muted:#8fa89c; --faint:#5f7a6e;
+    --green:#2ee6a8; --green2:#10b981; --green-dim:rgba(46,230,168,.10);
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .glow{position:fixed;top:-260px;left:50%;transform:translateX(-50%);width:900px;height:520px;background:radial-gradient(closest-side,rgba(46,230,168,.14),transparent 72%);pointer-events:none;z-index:0}
+  header{position:relative;z-index:2;padding:26px 0;border-bottom:1px solid var(--line);background:rgba(6,11,9,.72);backdrop-filter:blur(8px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.3px;font-size:18px}
+  .logo .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#0f2b21,#0a1a15);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center}
+  .logo .mark svg{display:block}
+  .logo span b{color:var(--green)}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--green),var(--green2));color:#04110c;font-weight:800;text-decoration:none;padding:12px 22px;border-radius:10px;border:1px solid rgba(46,230,168,.5);transition:.16s;letter-spacing:.1px}
+  .btn:hover{filter:brightness(1.08);box-shadow:0 8px 30px rgba(46,230,168,.22)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line2);font-weight:700}
+  .btn.ghost:hover{border-color:var(--green);color:var(--green);box-shadow:none;filter:none}
+  main{position:relative;z-index:1}
+  .hero{padding:92px 0 34px;text-align:center}
+  .pill{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);border:1px solid rgba(46,230,168,.35);border-radius:999px;padding:7px 15px;margin-bottom:28px;background:var(--green-dim)}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(46,230,168,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,230,168,.55)}70%{box-shadow:0 0 0 9px rgba(46,230,168,0)}100%{box-shadow:0 0 0 0 rgba(46,230,168,0)}}
+  h1{font-size:clamp(31px,5.2vw,54px);line-height:1.1;letter-spacing:-1.4px;font-weight:800;margin-bottom:20px}
+  h1 em{font-style:normal;background:linear-gradient(120deg,var(--green),#7ef0c8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:660px;margin:0 auto 34px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .tiny{color:var(--faint);font-size:13px;margin-top:20px;font-family:var(--mono);letter-spacing:.02em}
+  .pulseline{margin:46px auto 0;max-width:760px;overflow:hidden}
+  .pulseline svg{width:100%;height:auto;display:block}
+  .pline{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease forwards .25s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:12px}
+  h2{font-size:clamp(23px,3.3vw,32px);letter-spacing:-.7px;font-weight:800;margin-bottom:14px}
+  .lede{color:var(--muted);max-width:640px;margin-bottom:32px;font-size:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:15px;padding:24px;transition:.18s}
+  .card:hover{border-color:var(--line2);transform:translateY(-2px)}
+  .card h3{font-size:17px;margin-bottom:8px;letter-spacing:-.2px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px;font-weight:700;border:1px solid rgba(46,230,168,.28);border-radius:6px;padding:3px 9px;background:var(--green-dim)}
+  .steps{counter-reset:step;display:grid;gap:14px}
+  .step{display:flex;gap:18px;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+  .step .num{flex:0 0 42px;height:42px;border-radius:11px;background:var(--green-dim);border:1px solid rgba(46,230,168,.4);color:var(--green);font-weight:800;display:flex;align-items:center;justify-content:center;font-family:var(--mono)}
+  .step h3{font-size:16.5px;margin-bottom:4px}
+  .step p{color:var(--muted);font-size:14.5px}
+  .spectable{width:100%;border-collapse:collapse;font-size:14.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .spectable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);text-align:left;padding:14px 18px;background:var(--card2);border-bottom:1px solid var(--line)}
+  .spectable td{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+  .spectable tr:last-child td{border-bottom:0}
+  .spectable td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+  .price{background:linear-gradient(180deg,var(--card2),#0a120e);border:1px solid var(--line2);border-radius:20px;padding:38px 30px;text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+  .price:before{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1px;background:linear-gradient(135deg,rgba(46,230,168,.55),transparent 40%,transparent 60%,rgba(46,230,168,.28));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .price .amount{font-size:clamp(44px,8vw,60px);font-weight:800;letter-spacing:-2.5px}
+  .price .amount small{font-size:17px;color:var(--muted);font-weight:600;letter-spacing:0;display:block;margin-top:6px;font-family:var(--mono)}
+  .price ul{list-style:none;margin:26px auto 30px;max-width:460px;text-align:left}
+  .price li{padding:8px 0 8px 32px;position:relative;font-size:15px}
+  .price li:before{content:"";position:absolute;left:0;top:16px;width:16px;height:9px;border-left:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(-45deg)}
+  details{border:1px solid var(--line);border-radius:13px;padding:18px 22px;margin-bottom:10px;background:var(--card);transition:.15s}
+  details[open]{border-color:var(--line2)}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";float:right;color:var(--green);font-weight:800;font-family:var(--mono)}
+  details[open] summary:after{content:"–"}
+  details p{color:var(--muted);font-size:14.5px;margin-top:10px}
+  .note{color:var(--faint);font-size:13px;margin-top:16px;font-family:var(--mono)}
+  footer{padding:44px 0 64px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;text-align:center;position:relative;z-index:1}
+  footer a{color:var(--green);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  @media(max-width:560px){
+    .hero{padding:64px 0 24px}
+    section{padding:50px 0}
+    .step{flex-direction:column;gap:10px}
+    .spectable td:first-child{white-space:normal}
+  }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="mark">
+        <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 13h3.6l1.9-5.2L11 18l2.6-8.6L15.4 13H22" fill="none" stroke="#2ee6a8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <span>Rank<b>Pulse</b>HQ</span>
+    </div>
+    <a class="btn ghost" href="https://whop.com/rankpulsehq/">Open store</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <div class="pill"><span class="dot"></span>Done-for-you SEO content engine</div>
+    <h1>Fresh SEO content, <em>delivered every 72 hours</em>.</h1>
+    <p class="sub">RankPulseHQ keeps your publishing queue full. Every 3 days, a new SEO Content Drop arrives in your Whop chat — three long-form researched articles plus meta descriptions and internal-link suggestions, publish-ready.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://whop.com/rankpulsehq/">Start your content drops →</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+    <p class="tiny">Billed via Whop · $250 every 3 days · Cancel anytime</p>
+
+    <div class="pulseline" aria-hidden="true">
+      <svg viewBox="0 0 760 90" fill="none">
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="760" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#10b981" stop-opacity="0"/>
+            <stop offset=".22" stop-color="#2ee6a8"/>
+            <stop offset=".8" stop-color="#2ee6a8"/>
+            <stop offset="1" stop-color="#7ef0c8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path class="pline" d="M0 45 H150 L172 45 L186 20 L204 68 L222 12 L240 45 L262 45 H430 L448 45 L460 28 L476 62 L492 18 L508 45 L528 45 H760" stroke="url(#pg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <section id="drops">
+    <div class="wrap">
+      <div class="kicker">Inside every drop</div>
+      <h2>One drop. Three publish-ready articles.</h2>
+      <p class="lede">Each SEO Content Drop is researched around your niche and packaged as a clean PDF — delivered straight into your Whop chat, ready to hand to your editor or publish as-is.</p>
+      <div class="grid">
+        <div class="card"><div class="tag">Articles</div><h3>3 long-form articles</h3><p>1,200–1,500 words each, written from research on your topics — structured, readable, and ready for your site.</p></div>
+        <div class="card"><div class="tag">Meta</div><h3>Meta descriptions</h3><p>A matching meta description for every article, so each page ships with its search snippet already written.</p></div>
+        <div class="card"><div class="tag">Links</div><h3>Internal-link suggestions</h3><p>Recommended internal links for each piece — where to point readers next and how the articles can interlink.</p></div>
+        <div class="card"><div class="tag">Delivery</div><h3>PDF pack in your chat</h3><p>Delivered as a single organized PDF in your Whop chat every 3 days. No dashboards, no calls, no chasing.</p></div>
+        <div class="card"><div class="tag">Voice</div><h3>Matched to your brand</h3><p>Written around your brand name, niche, and tone — so every article sounds like it belongs on your site.</p></div>
+        <div class="card"><div class="tag">Cadence</div><h3>Every 72 hours</h3><p>A steady rhythm you can plan a publishing calendar around — three articles, arriving on schedule.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="kicker">How it works</div>
+      <h2>Set it up once. Drops keep coming.</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h3>Subscribe on Whop</h3><p>Join RankPulseHQ on Whop — $250 every 3 days, recurring. You can cancel anytime.</p></div></div>
+        <div class="step"><div class="num">2</div><div><h3>Send three details</h3><p>Drop us your brand name, your niche or topics, and the tone you want. That's the whole brief — done in minutes.</p></div></div>
+        <div class="step"><div class="num">3</div><div><h3>Receive a drop every 3 days</h3><p>Every 72 hours, a fresh SEO Content Drop lands in your Whop chat: 3 researched articles, meta descriptions, and internal-link suggestions in one PDF.</p></div></div>
+      </div>
+      <p class="note">// Everything happens inside Whop — no calls, no meetings, no tooling to learn.</p>
+    </div>
+  </section>
+
+  <section id="engine">
+    <div class="wrap">
+      <div class="kicker">The engine</div>
+      <h2>What each drop covers, in plain terms.</h2>
+      <table class="spectable">
+        <tr><th>Element</th><th>What you get every 3 days</th></tr>
+        <tr><td>Long-form articles</td><td>3 researched articles, 1,200–1,500 words each, written for your niche and tone.</td></tr>
+        <tr><td>Meta descriptions</td><td>One ready-to-paste meta description per article.</td></tr>
+        <tr><td>Internal links</td><td>Suggested internal-link placements so your articles support each other.</td></tr>
+        <tr><td>Format</td><td>A single organized PDF pack, delivered in your Whop chat.</td></tr>
+        <tr><td>Your input</td><td>Brand name, niche or topics, and preferred tone — given once.</td></tr>
+        <tr><td>Cadence</td><td>One drop every 3 days, for as long as your subscription is active.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="price">
+        <div class="kicker">Simple pricing</div>
+        <div class="amount">$250 <small>every 3 days · recurring</small></div>
+        <ul>
+          <li>3 long-form articles per drop (1,200–1,500 words each)</li>
+          <li>Meta descriptions for every article</li>
+          <li>Internal-link suggestions included</li>
+          <li>Publish-ready PDF pack in your Whop chat</li>
+          <li>New drop delivered every 72 hours</li>
+          <li>Cancel anytime — no lock-in</li>
+        </ul>
+        <a class="btn" href="https://whop.com/rankpulsehq/">Get your first drop on Whop →</a>
+        <p class="note">Subscription billed through Whop every 3 days. Cancel anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="kicker">FAQ</div>
+      <h2>Quick answers.</h2>
+      <details><summary>How does the $250 every-3-days billing work?</summary><p>RankPulseHQ is a recurring subscription: $250 is charged every 3 days through Whop while your plan is active. You can cancel anytime from your Whop account, and drops stop after cancellation.</p></details>
+      <details><summary>What exactly is in each SEO Content Drop?</summary><p>A single PDF pack containing 3 long-form researched articles (1,200–1,500 words each), a meta description for each article, and internal-link suggestions — all matched to your brand and niche.</p></details>
+      <details><summary>Where are drops delivered?</summary><p>Directly in your Whop chat. Every 3 days a new drop appears there — no separate dashboard, no email chains, no calls.</p></details>
+      <details><summary>What do you need from me to start?</summary><p>Three things: your brand name, your niche or the topics you want covered, and the tone you'd like the writing in. Send them once and drops begin.</p></details>
+      <details><summary>Can I change my topics or tone later?</summary><p>Yes. Message us in your Whop chat with the updated details and future drops will follow the new direction.</p></details>
+      <details><summary>Can I cancel?</summary><p>Anytime, from your Whop subscription settings. There's no long-term contract — you stay for as long as the drops are useful to you.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>RankPulseHQ</strong> — a done-for-you SEO content engine.</p>
+    <p style="margin-top:8px">Subscriptions are purchased and delivered through <a href="https://whop.com/rankpulsehq/">whop.com/rankpulsehq</a>.</p>
+    <p style="margin-top:14px">© <span id="y"></span> RankPulseHQ. All rights reserved.</p>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</footer>
+</body>
+</html>
